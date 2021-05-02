@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.App-body {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -26,6 +26,16 @@
 
 .App-link {
   color: #61dafb;
+}
+
+
+.tareas{
+  background: rgb(241, 247, 214);
+  border: 1.5px solid rgb(202, 151, 9);
+  color: #282c34;
+  padding: 20px 10px;
+  margin: 10px;
+  display: flex;
 }
 
 @keyframes App-logo-spin {

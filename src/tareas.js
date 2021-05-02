@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState , useCallback} from 'react';
 import './App.css';
 import { v4 as uuid } from 'uuid';
-
+import Formulario from './form'
 
 
 const Tareas = () => {
@@ -20,36 +20,35 @@ const Tareas = () => {
     },
   ]);
 
+ 
   const addNotes = () => {
     setNotes([...notes, {
       id: uuid(),
-      task: 'Nueva tarea'
+      task: 'nueva tarea'
     }])
 
   }
-
-  const deleteNotes =()=>{
+  const nisman = useCallback(() => {
     console.log('todavia no funciona')
-  }
+    
+}, [])
   
 
   return (
     <div className="App">
+      <Formulario/>
       <button className="boton" onClick={addNotes}>+</button> 
     
       <ul>
         {notes.map((item) =>
           <li className="tareas" key={item.id}>{item.task}
-            <button className="boton" onClick={deleteNotes}>x</button>
+            <button className="boton" onClick={()=>nisman()}>x</button>
           </li>
           
         )
         }
       </ul>
-      {console.log(notes)}
-
-
-
+      
     </div>
   );
 }

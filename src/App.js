@@ -1,7 +1,7 @@
 
 import './App.css';
 import Tareas from './tareas';
-import TareasDos from './tareas2';
+
 
 function App() {
   return (
@@ -11,7 +11,6 @@ function App() {
         
       </header>
       <Tareas/>
-      <TareasDos></TareasDos>
     </div>
   );
 }
